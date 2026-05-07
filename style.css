@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SCROLL SUAVE */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e2e8f0, #f8fafc);
+    color: #1e293b;
+}
+
+/* HERO */
+
+.hero{
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+
+    color: white;
+
+    animation: aparecerTopo 1s ease;
+}
+
+.hero-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text{
+    max-width: 650px;
+}
+
+.hero h1{
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero h2{
+    color: #38bdf8;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+/* FOTO PERFIL */
+
+.hero-image img{
+    width: 320px;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0px 10px 30px rgba(0,0,0,0.35),
+        0px 0px 30px rgba(56,189,248,0.25);
+
+    transition: 0.4s;
+}
+
+/* IMAGENS DOS CARDS */
+
+.card img{
+    width: 70%;
+    max-width: 500px;
+
+    display: block;
+
+    margin: 25px auto;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.4s;
+}
+
+.card img:hover{
+    transform: scale(1.03);
+
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.18);
+}
+
+.hero-image img:hover{
+    transform: scale(1.03);
+}
+
+/* BOTÕES */
+
+.hero-buttons{
+    margin-top: 30px;
+
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao{
+    display: inline-block;
+
+    background-color: #38bdf8;
+    color: #0f172a;
+
+    padding: 12px 20px;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.botao:hover{
+    transform: scale(1.05);
+    background-color: #7dd3fc;
+}
+
+.linkedin{
+    background-color: #0077b5;
+    color: white;
+}
+
+.linkedin:hover{
+    background-color: #0099e6;
+}
+
+/* NAVBAR */
+
+nav{
+    background-color: rgba(15, 23, 42, 0.95);
+
+    padding: 18px;
+
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+nav a{
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0 18px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #38bdf8;
+    letter-spacing: 1px;
+}
+
+/* MAIN */
+
+main{
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+}
+
+/* CARDS */
+
+.card{
+    background-color: white;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+
+    animation: subir 0.8s ease;
+
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+
+    overflow: hidden;
+}
+
+.card:hover{
+    transform: translateY(-8px) scale(1.01);
+
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.15);
+}
+
+/* TEXTOS */
+
+h2{
+    margin-bottom: 18px;
+
+    color: #0f172a;
+
+    font-size: 1.8rem;
+}
+
+p{
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+ul{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li{
+    margin-bottom: 8px;
+}
+
+/* FORMULÁRIO */
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input,
+textarea{
+    padding: 14px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    transition: 0.3s;
+}
+
+textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+
+    border: 1px solid #38bdf8;
+
+    box-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+/* BOTÃO FORM */
+
+button{
+    background-color: #0f172a;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #1e293b;
+
+    transform: scale(1.02);
+}
+
+/* SKILLS */
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.skills span{
+    background: #0f172a;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.skills span:hover{
+    transform: translateY(-3px);
+
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* FOOTER */
+
+footer{
+    background: #0f172a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes subir{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes aparecerTopo{
+
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 768px){
+
+    .hero{
+        padding: 30px;
+        text-align: center;
+    }
+
+    .hero-content{
+        flex-direction: column-reverse;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .hero h2{
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .hero-image img{
+        width: 220px;
+        height: 220px;
+    }
+
+    nav a{
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .card{
+        padding: 22px;
+    }
+
+}
